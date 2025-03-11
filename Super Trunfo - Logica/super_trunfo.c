@@ -2,6 +2,8 @@
 #include <string.h>
 
 void main()  {
+    //Declação de variáveis da aplicação
+
     char estado1, estado2;
     char codigo1[5], codigo2[5];
     char nome1[50],nome2[50];
@@ -12,6 +14,9 @@ void main()  {
     float densidade1, densidade2;
     float pibpcap1, pibpcap2;
     float superpoder1, superpoder2;
+
+    //Declação de variáveis do menu
+    int opcao;
 
 
     // ------ Carta 2 ------
@@ -142,14 +147,72 @@ void main()  {
     printf("PIB per capita: R$ %0.2f \n\n", pibpcap2);
 
 
-    // ====== Comparação escolhida: PIB =====
+    // Menu do usuário para decidir a comparação ou exibição
 
-    printf("Carta 1 - PIB: %0.2f\n", pib1);
-    printf("Carta 2 - PIB: %0.2f\n", pib2);
-    if(pib1 > pib2) {
-        printf("COMPARAÇÃO: O PIB da CARTA 1 é maior que a Carta 2\n");
-    } else {
-        printf("COMPARAÇÃO: O PIB da CARTA 2 é maior que a Carta 1\n");
+
+
+    printf("===== Menu =====\n");
+    printf("1. Nome do estado (Exibição)\n");
+    printf("2. População\n");
+    printf("3. Área\n");
+    printf("4. PIB\n");
+    printf("5. Número de Pontos Turísticos\n");
+    printf("6. Densidade demográfica\n");
+    printf("Digite a opção: ");
+    scanf("%d", &opcao);
+    switch (opcao)
+    {
+        case 1:
+            printf("Nome dos países: Carta 1: %s | Carta 2: %s\n", nome1, nome2);
+            break;
+        
+        case 2:
+            if(populacao1 > populacao2) {
+                printf("A maior população é da Carta 1 (%s) com: %i habitantes\n", nome1, populacao1);
+            } else {
+                printf("A maior população é da Carta 2 (%s) com: %i habitantes\n", nome2, populacao2);
+
+            }
+            break;
+
+        case 3:
+            if(area1 > area2) {
+                printf("A maior área é da Carta 1 (%s) com: %0.2f km²\n", nome1, area1);
+            } else {
+                printf("A maior área é da Carta 2 (%s) com: %0.2f km²\n", nome2, area2);
+
+            }
+            break;
+
+        case 4:
+            if(pib1 > pib2) {
+                printf("O maior PIB é da Carta 1 (%s) com: R$%0.2f bilhões\n", nome1, pib1);
+            } else {
+                printf("O maior PIB é da Carta 2 (%s) com: R$%0.2f bilhões\n", nome2, pib2);
+
+            }
+            break;
+
+        case 5:
+            if(numpt1 > numpt2) {
+                printf("O maior Núemro de Pontos Turísticos é da Carta 1 (%s) com: %i\n", nome1, numpt1);
+            } else {
+                printf("O maior Núemro de Pontos Turísticos é da Carta 2 (%s) com: %i\n", nome2, numpt2);
+
+            }
+            break;
+
+        case 6:
+            if(densidade1 < densidade2) {
+                printf("A menor Densidade demográfica é da Carta 1 (%s) com: %0.2f hab/km²\n", nome1, densidade1);
+            } else {
+                printf("A menor Densidade demográfica é da Carta 2 (%s) com: %0.2f hab/km²\n", nome2, densidade2);
+
+            }
+            break;
+        default:
+            printf("Digite uma opção válida.");
+            break;
     }
     
 }
