@@ -142,14 +142,15 @@ void main()  {
     printf("PIB per capita: R$ %0.2f \n", pibpcap2);
 
 
-    printf("===== Comparação das cartas (1 -> CARTA 1 | 0 -> CARTA 2) =====\n");
-    printf("População: %d\n", populacao1 > populacao2);
-    printf("Área: %d\n", area1 > area2);
-    printf("PIB: %d\n", pib1 > pib2);
-    printf("Pontos Turísticos: %d\n", numpt1 > numpt2);
-    printf("Densidade populacional: %d\n", densidade1 < densidade2);
-    printf("PIB per Capita: %d\n", pibpcap1 > pibpcap2);
-    printf("Super Poder: %d\n", superpoder1 > superpoder2);
+    // ====== Comparação escolhida: PIB =====
+
+    printf("Carta 1 - PIB: %0.2f", pib1);
+    printf("Carta 2 - PIB: %0.2f", pib2);
+    if(pib1 > pib2) {
+        printf("COMPARAÇÃO: O PIB da CARTA 1 é maior que a Carta 2");
+    } else {
+        printf("COMPARAÇÃO: O PIB da CARTA 1 é maior que a Carta 2");
+    }
     
 }
 
