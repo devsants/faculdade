@@ -93,7 +93,7 @@ void main()  {
     printf("Digite o Número de Pontos Turísticos da Carta 2:\n");
     scanf("%i", &numpt2);
 
-    //Exibição dados da Primeira Carta
+    //Exibição dados da Segunda Carta
 
     printf("Carta 2:\n");
 
