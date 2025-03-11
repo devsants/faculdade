@@ -61,26 +61,25 @@ void main()  {
 
 
     //Exibição dados da Primeira Carta
+    // printf("Carta 1:\n");
 
-    printf("Carta 1:\n");
-
-    printf("Estado: %c \n", estado1);
+    // printf("Estado: %c \n", estado1);
     
-    printf("Código: %s \n", codigo1);
+    // printf("Código: %s \n", codigo1);
 
-    printf("Nome da Cidade: %s \n", nome1);
+    // printf("Nome da Cidade: %s \n", nome1);
 
-    printf("População: %i habitantes\n", populacao1);
+    // printf("População: %i habitantes\n", populacao1);
     
-    printf("Área: %0.2f km²\n", area1);
+    // printf("Área: %0.2f km²\n", area1);
     
-    printf("PIB: R$ %0.2f bilhões\n",pib1);
+    // printf("PIB: R$ %0.2f bilhões\n",pib1);
     
-    printf("Número de Pontos Turísticos: %d \n", numpt1);
+    // printf("Número de Pontos Turísticos: %d \n", numpt1);
 
-    printf("Densidade demográfica: %0.2f hab/km²\n", densidade1);
+    // printf("Densidade demográfica: %0.2f hab/km²\n", densidade1);
 
-    printf("PIB per capita: R$%0.2f \n", pibpcap1);
+    // printf("PIB per capita: R$%0.2f \n", pibpcap1);
 
 
     // ------ Carta 2 ------
@@ -126,31 +125,30 @@ void main()  {
 
     //Exibição dados da Segunda Carta
 
-    printf("Carta 2:\n");
+    // printf("Carta 2:\n");
 
-    printf("Estado: %c \n", estado2);
+    // printf("Estado: %c \n", estado2);
     
-    printf("Código: %s \n", codigo2);
+    // printf("Código: %s \n", codigo2);
 
-    printf("Nome da Cidade: %s \n", nome2);
+    // printf("Nome da Cidade: %s \n", nome2);
 
-    printf("População: %i habitantes\n", populacao2);
+    // printf("População: %i habitantes\n", populacao2);
     
-    printf("Área: %0.2f km²\n", area2);
+    // printf("Área: %0.2f km²\n", area2);
     
-    printf("PIB: R$ %0.2f bilhões\n",pib2);
+    // printf("PIB: R$ %0.2f bilhões\n",pib2);
     
-    printf("Número de Pontos Turísticos da Carta 2: %d \n", numpt2);
+    // printf("Número de Pontos Turísticos da Carta 2: %d \n", numpt2);
     
-    printf("Densidade demográfica: %0.2f hab/km²\n", densidade2);
+    // printf("Densidade demográfica: %0.2f hab/km²\n", densidade2);
 
-    printf("PIB per capita: R$ %0.2f \n\n", pibpcap2);
+    // printf("PIB per capita: R$ %0.2f \n\n", pibpcap2);
+
+
 
 
     // Menu do usuário para decidir a comparação ou exibição
-
-
-
     printf("===== Menu =====\n");
     printf("1. Nome do estado (Exibição)\n");
     printf("2. População\n");
@@ -167,6 +165,9 @@ void main()  {
             break;
         
         case 2:
+            if(populacao1 == populacao2) {
+                printf("A população dos dois países é a mesma!");
+            }
             if(populacao1 > populacao2) {
                 printf("A maior população é da Carta 1 (%s) com: %i habitantes\n", nome1, populacao1);
             } else {
@@ -176,7 +177,9 @@ void main()  {
             break;
 
         case 3:
-            if(area1 > area2) {
+            if(area1 == area2) {
+                printf("A Área dos dois países é a mesma!");
+            } else if(area1 > area2) {
                 printf("A maior área é da Carta 1 (%s) com: %0.2f km²\n", nome1, area1);
             } else {
                 printf("A maior área é da Carta 2 (%s) com: %0.2f km²\n", nome2, area2);
@@ -185,7 +188,10 @@ void main()  {
             break;
 
         case 4:
-            if(pib1 > pib2) {
+            if(pib1 == pib2) {
+                printf("O PIB dos dois países é a mesma!");
+            }
+            else if(pib1 > pib2) {
                 printf("O maior PIB é da Carta 1 (%s) com: R$%0.2f bilhões\n", nome1, pib1);
             } else {
                 printf("O maior PIB é da Carta 2 (%s) com: R$%0.2f bilhões\n", nome2, pib2);
@@ -194,15 +200,20 @@ void main()  {
             break;
 
         case 5:
-            if(numpt1 > numpt2) {
-                printf("O maior Núemro de Pontos Turísticos é da Carta 1 (%s) com: %i\n", nome1, numpt1);
+            if(numpt1 == numpt2) {
+                printf("O Número de Pontos Turísticos dos dois países é a mesma!");
+            } else if(numpt1 > numpt2) {
+                printf("O maior Número de Pontos Turísticos é da Carta 1 (%s) com: %i\n", nome1, numpt1);
             } else {
-                printf("O maior Núemro de Pontos Turísticos é da Carta 2 (%s) com: %i\n", nome2, numpt2);
+                printf("O maior Número de Pontos Turísticos é da Carta 2 (%s) com: %i\n", nome2, numpt2);
 
             }
             break;
 
         case 6:
+            if(densidade1 == densidade2) {
+                printf("A densidade demográfica dos dois países é a mesma!");
+            }
             if(densidade1 < densidade2) {
                 printf("A menor Densidade demográfica é da Carta 1 (%s) com: %0.2f hab/km²\n", nome1, densidade1);
             } else {
