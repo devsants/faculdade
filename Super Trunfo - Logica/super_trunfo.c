@@ -14,9 +14,10 @@ void main()  {
     float densidade1, densidade2;
     float pibpcap1, pibpcap2;
     float superpoder1, superpoder2;
+    float somaatributos1, somaatributos2;
 
     //Declação de variáveis do menu
-    int opcao;
+    int opcao1, opcao2;
 
 
     // ------ Carta 2 ------
@@ -156,76 +157,255 @@ void main()  {
     printf("4. PIB\n");
     printf("5. Número de Pontos Turísticos\n");
     printf("6. Densidade demográfica\n");
-    printf("Digite a opção: ");
-    scanf("%d", &opcao);
-    switch (opcao)
+    printf("Digite a opção 1: \n");
+    scanf("%d", &opcao1);
+    switch (opcao1)
     {
         case 1:
-            printf("Nome dos países: Carta 1: %s | Carta 2: %s\n", nome1, nome2);
+            printf("1ª opção escolhida: Nome do estado:\n");
             break;
         
         case 2:
-            if(populacao1 == populacao2) {
-                printf("A população dos dois países é a mesma!");
-            }
-            if(populacao1 > populacao2) {
-                printf("A maior população é da Carta 1 (%s) com: %i habitantes\n", nome1, populacao1);
-            } else {
-                printf("A maior população é da Carta 2 (%s) com: %i habitantes\n", nome2, populacao2);
-
-            }
+            printf("1ª opção escolhida: População:\n");            
             break;
 
         case 3:
-            if(area1 == area2) {
-                printf("A Área dos dois países é a mesma!");
-            } else if(area1 > area2) {
-                printf("A maior área é da Carta 1 (%s) com: %0.2f km²\n", nome1, area1);
-            } else {
-                printf("A maior área é da Carta 2 (%s) com: %0.2f km²\n", nome2, area2);
-
-            }
+            printf("1ª opção escolhida: Área dos países:\n");            
             break;
 
         case 4:
-            if(pib1 == pib2) {
-                printf("O PIB dos dois países é a mesma!");
-            }
-            else if(pib1 > pib2) {
-                printf("O maior PIB é da Carta 1 (%s) com: R$%0.2f bilhões\n", nome1, pib1);
-            } else {
-                printf("O maior PIB é da Carta 2 (%s) com: R$%0.2f bilhões\n", nome2, pib2);
-
-            }
+            printf("1ª opção escolhida: PIB\n");
             break;
 
         case 5:
-            if(numpt1 == numpt2) {
-                printf("O Número de Pontos Turísticos dos dois países é a mesma!");
-            } else if(numpt1 > numpt2) {
-                printf("O maior Número de Pontos Turísticos é da Carta 1 (%s) com: %i\n", nome1, numpt1);
-            } else {
-                printf("O maior Número de Pontos Turísticos é da Carta 2 (%s) com: %i\n", nome2, numpt2);
-
-            }
+            printf("1ª opção escolhida: Número de pontos turístico:\n");
             break;
 
         case 6:
-            if(densidade1 == densidade2) {
-                printf("A densidade demográfica dos dois países é a mesma!");
-            }
-            if(densidade1 < densidade2) {
-                printf("A menor Densidade demográfica é da Carta 1 (%s) com: %0.2f hab/km²\n", nome1, densidade1);
-            } else {
-                printf("A menor Densidade demográfica é da Carta 2 (%s) com: %0.2f hab/km²\n", nome2, densidade2);
+            printf("1ª opção escolhida: Densidade Demográfica:\n");
+            break;
+        default:
+            printf("Digite uma opção válida.");
+            break;
+    }
 
-            }
+    printf("Digite a opção 2: ");
+    scanf("%d", &opcao2);
+
+
+    switch (opcao2)
+    {
+        case 1:
+            printf("2ª opção escolhida: Nome do estado:\n");
+            break;
+        
+        case 2:
+            printf("2ª opção escolhida: População:\n");            
+            break;
+
+        case 3:
+            printf("2ª opção escolhida: Área dos países:\n");           
+            break;
+
+        case 4:
+            printf("2ª opção escolhida: PIB\n");
+            break;
+
+        case 5:
+            printf("2ª opção escolhida: Número de pontos turístico:\n");
+            break;
+
+        case 6:
+            printf("2ª opção escolhida: Densidade Demográfica:\n");
             break;
         default:
             printf("Digite uma opção válida.");
             break;
     }
     
+
+
+    printf("Resultado comparação entre: %s e %s", nome1, nome2);
+    
+    // Exibição individual dos atributos adicionando cada atributo à soma.
+    if(opcao1 == 1) {
+        printf("Nome dos países: Carta 1: %s | Carta 2: %s\n", nome1, nome2);
+
+    } else if(opcao1 == 2) {
+        somaatributos1 = (float) somaatributos1 + populacao1;
+        somaatributos2 = (float) somaatributos2 + populacao2;
+
+
+        if(populacao1 == populacao2) {
+            printf("A população dos dois países é a mesma!");
+        }
+        else if(populacao1 > populacao2) {
+            printf("A maior população é da Carta 1 (%s) com: %i habitantes\n", nome1, populacao1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %i habitantes\n", nome2, populacao2);
+        } else {
+            printf("A maior população é da Carta 2 (%s) com: %i habitantes\n", nome2, populacao2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %i habitantes\n", nome1, populacao1);
+
+        }
+    } else if(opcao1 == 3) {
+        somaatributos1 = (float) somaatributos1 + area1;
+        somaatributos2 = (float) somaatributos2 + area2;
+
+        if(area1 == area2) {
+            printf("A Área dos dois países é a mesma!");
+        } else if(area1 > area2) {
+            printf("A maior área é da Carta 1 (%s) com: %0.2f km²\n", nome1, area1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %0.2f km²\n", nome2, area1);
+            
+        } else {
+            printf("A maior área é da Carta 2 (%s) com: %0.2f km²\n", nome2, area2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %0.2f km²\n", nome1, area1);
+        }
+        
+    } else if(opcao1 == 4) {
+        somaatributos1 = (float) somaatributos1 + pib1;
+        somaatributos2 = (float) somaatributos2 + pib2;
+        if(pib1 == pib2) {
+            printf("O PIB dos dois países é a mesma!");
+        }
+        else if(pib1 > pib2) {
+            printf("O maior PIB é da Carta 1 (%s) com: R$%0.2f bilhões\n", nome1, pib1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %0.2f bilhões\n", nome2, pib2);
+
+        } else {
+            printf("O maior PIB é da Carta 2 (%s) com: R$%0.2f bilhões\n", nome2, pib2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %0.2f bilhões\n", nome1, pib1);
+        }
+    } else if (opcao1 == 5) {
+        somaatributos1 = (float) somaatributos1 + numpt1;
+        somaatributos2 = (float) somaatributos2 + numpt2;
+
+        if(numpt1 == numpt2) {
+            printf("O Número de Pontos Turísticos dos dois países é a mesma!");
+        } else if(numpt1 > numpt2) {
+            printf("O maior Número de Pontos Turísticos é da Carta 1 (%s) com: %i\n", nome1, numpt1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %i pontos turísticos\n", nome2, numpt2);
+
+        } else {
+            printf("O maior Número de Pontos Turísticos é da Carta 2 (%s) com: %i\n", nome2, numpt2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %i pontos turísticos\n", nome1, numpt1);
+
+
+        }
+    } else if(opcao1 == 6) {
+        somaatributos1 = (float) somaatributos1 - densidade1;
+        somaatributos2 = (float) somaatributos2 - densidade2;
+
+        if(densidade1 == densidade2) {
+            printf("A densidade demográfica dos dois países é a mesma!");
+        }
+        if(densidade1 < densidade2) {
+            printf("A menor Densidade demográfica é da Carta 1 (%s) com: %0.2f hab/km²\n", nome1, densidade1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %i habitantes\n", nome2, densidade2);
+
+        } else {
+            printf("A menor Densidade demográfica é da Carta 2 (%s) com: %0.2f hab/km²\n", nome2, densidade2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %0.2f hab/km² \n", nome1, densidade1);
+
+
+        }
+    }
+
+
+    
+    if(opcao2 == 1) {
+        printf("Nome dos países: Carta 1: %s | Carta 2: %s\n", nome1, nome2);
+
+    } else if(opcao2 == 2) {
+        somaatributos1 = (float) somaatributos1 + populacao1;
+        somaatributos2 = (float) somaatributos2 + populacao2;
+
+
+        if(populacao1 == populacao2) {
+            printf("A população dos dois países é a mesma!");
+        }
+        else if(populacao1 > populacao2) {
+            printf("A maior população é da Carta 1 (%s) com: %i habitantes\n", nome1, populacao1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %i habitantes\n", nome2, populacao2);
+        } else {
+            printf("A maior população é da Carta 2 (%s) com: %i habitantes\n", nome2, populacao2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %i habitantes\n", nome1, populacao1);
+
+        }
+    } else if(opcao2 == 3) {
+        somaatributos1 = (float) somaatributos1 + area1;
+        somaatributos2 = (float) somaatributos2 + area2;
+
+        if(area1 == area2) {
+            printf("A Área dos dois países é a mesma!");
+        } else if(area1 > area2) {
+            printf("A maior área é da Carta 1 (%s) com: %0.2f km²\n", nome1, area1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %0.2f km²\n", nome2, area1);
+            
+        } else {
+            printf("A maior área é da Carta 2 (%s) com: %0.2f km²\n", nome2, area2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %0.2f km²\n", nome1, area1);
+        }
+        
+    } else if(opcao2 == 4) {
+        somaatributos1 = (float) somaatributos1 + pib1;
+        somaatributos2 = (float) somaatributos2 + pib2;
+        if(pib1 == pib2) {
+            printf("O PIB dos dois países é a mesma!");
+        }
+        else if(pib1 > pib2) {
+            printf("O maior PIB é da Carta 1 (%s) com: R$%0.2f bilhões\n", nome1, pib1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %0.2f bilhões\n", nome2, pib2);
+
+        } else {
+            printf("O maior PIB é da Carta 2 (%s) com: R$%0.2f bilhões\n", nome2, pib2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %0.2f bilhões\n", nome1, pib1);
+
+
+        }
+    } else if (opcao2 == 5) {
+        somaatributos1 = (float) somaatributos1 + numpt1;
+        somaatributos2 = (float) somaatributos2 + numpt2;
+
+        if(numpt1 == numpt2) {
+            printf("O Número de Pontos Turísticos dos dois países é a mesma!");
+        } else if(numpt1 > numpt2) {
+            printf("O maior Número de Pontos Turísticos é da Carta 1 (%s) com: %i\n", nome1, numpt1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %i pontos turísticos\n", nome2, numpt2);
+
+        } else {
+            printf("O maior Número de Pontos Turísticos é da Carta 2 (%s) com: %i\n", nome2, numpt2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %i pontos turísticos\n", nome1, numpt1);
+
+
+        }
+    } else if(opcao2 == 6) {
+        somaatributos1 = (float) somaatributos1 - densidade1;
+        somaatributos2 = (float) somaatributos2 - densidade2;
+
+        if(densidade1 == densidade2) {
+            printf("A densidade demográfica dos dois países é a mesma!");
+        }
+        if(densidade1 < densidade2) {
+            printf("A menor Densidade demográfica é da Carta 1 (%s) com: %0.2f hab/km²\n", nome1, densidade1);
+            printf("Enquanto a da Carta 2 (%s) foi de: %i habitantes\n", nome2, densidade2);
+        } else {
+            printf("A menor Densidade demográfica é da Carta 2 (%s) com: %0.2f hab/km²\n", nome2, densidade2);
+            printf("Enquanto a da Carta 1 (%s) foi de: %0.2f hab/km² \n", nome1, densidade1);
+        }
+    }
+
+
+    // Lógica de cálculo do vencedor com base na soma dos atributos
+    if (somaatributos1 == somaatributos2){
+        printf("Com a soma dos atributos foi declarado empate:");
+        printf("%s com %0.2f pontos", nome1, somaatributos1);
+        printf("%s com %0.2f pontos", nome2, somaatributos2);        
+    } else if(somaatributos1 > somaatributos2) {
+        printf("Com a soma dos atributos o vencedor é: a Carta 1 (%s) com %0.2f pontos", nome1, somaatributos1);
+        printf("Enquanto a Carta 2 (%s) obteve %0.2f pontos", nome2, somaatributos2);
+    } else if(somaatributos1 < somaatributos2) {
+        printf("Com a soma dos atributos o vencedor é: a Carta 2 (%s) com %0.2f pontos", nome2, somaatributos2);
+        printf("Enquanto a Carta 1 (%s) obteve %0.2f pontos", nome1, somaatributos1);
+    }
 }
-
-
