@@ -7,6 +7,6 @@
 
 ## Super Trunfo - Lógica
 - Linguagem utilizada: C
-- Objetivo: Utilizando o código do exercício anterior, foi adicionado uma comparação de múltiplos atributos. Sendo os mesmos informados pelo usuário.
+- Objetivo: Utilizando o código do exercício anterior, foi adicionado a comparação de múltiplos atributos. Sendo os mesmos informados pelo usuário.
 - Desafios encontrados: Controle do buffer da linguagem.
 - Novidades: Utilização de condicionais (If/Else) e a estrutura Switch/Case.
