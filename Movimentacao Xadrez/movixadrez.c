@@ -15,7 +15,6 @@ void main() {
         }
         printf("Esquerda\n");
         casasV++;
-    }
-    
+    }   
 
 }
