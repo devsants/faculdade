@@ -9,10 +9,16 @@
 - Linguagem utilizada: C
 - Objetivo: Utilizando o código do exercício anterior, foi adicionado a comparação de múltiplos atributos. Sendo os mesmos informados pelo usuário.
 - Desafios encontrados: Controle do buffer da linguagem.
-- Novidades: Utilização de condicionais (If/Else) e a estrutura Switch/Case.
+- Conceitos utilizados: Utilização de condicionais (If/Else) e a estrutura Switch/Case.
 
 
 ## Movimentação Xadrez
 - Linguagem utilizada: C
 - Objetivo: Criar programa simples, com o objetivo de representar a movimentação de peças de xadrez.
-- Conceitos utilizados: Loops e Loops aninhados.
+- Conceitos utilizados: Loops e Loops Aninhados.
+
+
+## Movimentação Xadrez
+- Linguagem utilizada: C
+- Objetivo: Criar um jogo de batalha naval.
+- Conceitos utilizados: Vetores, Matrizes e Loops Aninhados.
