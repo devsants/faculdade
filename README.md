@@ -20,5 +20,5 @@
 
 ## Batalha Naval
 - Linguagem utilizada: C
-- Objetivo: Criar um jogo de batalha naval.
+- Objetivo: Criar um jogo de batalha naval, aplicando o posicionamento de navios e habilidades.
 - Conceitos utilizados: Condicionais, Vetores, Matrizes e Loops Aninhados.
