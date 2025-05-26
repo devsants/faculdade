@@ -18,7 +18,7 @@
 - Conceitos utilizados: Loops e Loops Aninhados.
 
 
-## Movimentação Xadrez
+## Batalha Naval
 - Linguagem utilizada: C
 - Objetivo: Criar um jogo de batalha naval.
-- Conceitos utilizados: Vetores, Matrizes e Loops Aninhados.
+- Conceitos utilizados: Condicionais, Vetores, Matrizes e Loops Aninhados.
