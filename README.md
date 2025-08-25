@@ -22,3 +22,9 @@
 - Linguagem utilizada: C
 - Objetivo: Criar um jogo de batalha naval, aplicando o posicionamento de navios e habilidades.
 - Conceitos utilizados: Condicionais, Vetores, Matrizes e Loops Aninhados.
+
+
+## WAR
+- Linguagem utilizada: C
+- Objetivo: Criar um jogo tendo base o WAR, com a criação de Territórios com nome, cor e número de tropas
+- Conceitos utilizados: Condicionais, Vetores, Struct.
