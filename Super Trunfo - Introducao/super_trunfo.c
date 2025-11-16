@@ -14,6 +14,7 @@ void main()  {
     float superpoder1, superpoder2;
 
 
+
     // ------ Carta 2 ------
 
 
